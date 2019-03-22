@@ -34,14 +34,38 @@ export default class userData {
         return Math.round(this.age);
     }
 
-    mercExpect(death, age) {
-        this.death = death * .24;
+    mercExpect(life, age) {
+        this.life = life * .24;
         this.age = age * .24;
-        this.lifeExpect = Math.round(this.death - this.age);
+        this.lifeExpect = Math.round(this.life - this.age);
         if(this.lifeExpect < 0) {
             let overLife = Math.abs((this.lifeExpect).toFixed(1));
-            return `You have lived ${overLife} Mercury years over the life expectancy on Mercury`
+            return `You have lived ${overLife} Mercury years over the life expectancy on Mercury.`
         }
-        return "You have " + Math.abs((this.lifeExpect).toFixed(1)) + " years left to live on Mercury"
+        return "You have " + Math.abs((this.lifeExpect).toFixed(1)) + " years left to live on Mercury."
+    }
+
+    venExpect(life, age) {
+        this.life = life * .62;
+        this.age = age * .62;
+        this.lifeExpect = Math.round(this.life - this.age);
+        if(this.lifeExpect < 0) {
+            let overLife = Math.abs((this.lifeExpect).toFixed(1));
+            return `You have lived ${overLife} Venus years over the life expectancy on Venus.`
+        }
+        return "You have " + Math.abs((this.lifeExpect).toFixed(1)) +
+        " years left to live on Venus."
+    }
+
+    marsExpect(life, age) {
+        this.life = life * 1.88;
+        this.age = age * 1.88;
+        this.lifeExpect = Math.round(this.life - this.age);
+        if(this.lifeExpect < 0) {
+            let overLife = Math.abs((this.lifeExpect).toFixed(1));
+            return `You have lived ${overLife} Mars years over the life expectancy on Mars.`
+        }
+        return "You have " + Math.abs((this.lifeExpect).toFixed(1)) +
+        " years left to live on Mars."
     }
 }
