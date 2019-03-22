@@ -1,0 +1,12 @@
+{
+  "name": "Super-Galactic-Age-Calculator",
+  "version": "1.0.0",
+  "description": "This is A web App that will take a users age in years and will calculate how old they are based on each planets solar year.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
