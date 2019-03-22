@@ -65,7 +65,17 @@ export default class userData {
             let overLife = Math.abs((this.lifeExpect).toFixed(1));
             return `You have lived ${overLife} Mars years over the life expectancy on Mars.`
         }
-        return "You have " + Math.abs((this.lifeExpect).toFixed(1)) +
-        " years left to live on Mars."
+        return "You have " + Math.abs((this.lifeExpect).toFixed(1)) + " years left to live on Mars."
+    }
+
+    jupExpect(life, age) {
+        this.life = life * 11.86;
+        this.age = age * 11.88;
+        this.lifeExpect = Math.round(this.life - this.age);
+        if(this.lifeExpect < 0) {
+            let overLife = Math.abs((this.lifeExpect).toFixed(1));
+            return `You have lived ${overLife} Jupiter years over the life expectancy on Jupiter.`
+        }
+        return "You have " + Math.abs((this.lifeExpect).toFixed(1)) + " years left to live on Jupiter."
     }
 }
