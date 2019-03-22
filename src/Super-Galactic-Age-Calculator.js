@@ -18,4 +18,19 @@ export default class userData {
         this.age = age * .24
         return Math.round(this.age);
     }
+
+    venAge(age) {
+        this.age = age * .62
+        return Math.round(this.age);
+    }
+
+    marsAge(age) {
+        this.age = age * 1.88
+        return Math.round(this.age);
+    }
+
+    jupAge(age) {
+        this.age = age * 11.86
+        return Math.round(this.age);
+    }
 }
