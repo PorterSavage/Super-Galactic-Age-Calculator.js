@@ -6,7 +6,7 @@ export default class userData {
         this.lifeExpect = lifeExpect;
     }
 
-    getUserAge() {
+    userAge() {
         let birthDay = new Date(this.birthYear, this.birthMonth, this.birthDay);
         let currentDate = new Date();
         let age = (currentDate - birthDay);
@@ -15,22 +15,33 @@ export default class userData {
     }
 
     mercAge(age) {
-        this.age = age * .24
+        this.age = age * .24;
         return Math.round(this.age);
     }
 
     venAge(age) {
-        this.age = age * .62
+        this.age = age * .62;
         return Math.round(this.age);
     }
 
     marsAge(age) {
-        this.age = age * 1.88
+        this.age = age * 1.88;
         return Math.round(this.age);
     }
 
     jupAge(age) {
-        this.age = age * 11.86
+        this.age = age * 11.86;
         return Math.round(this.age);
+    }
+
+    mercExpect(death, age) {
+        this.death = death * .24;
+        this.age = age * .24;
+        this.lifeExpect = Math.round(this.death - this.age);
+        if(this.lifeExpect < 0) {
+            let overLife = Math.abs((this.lifeExpect).toFixed(1));
+            return `You have lived ${overLife} Mercury years over the life expectancy on Mercury`
+        }
+        return "You have " + Math.abs((this.lifeExpect).toFixed(1)) + " years left to live on Mercury"
     }
 }
